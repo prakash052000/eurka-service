@@ -1,0 +1,16 @@
+server:
+  port: 8761  # Eureka Server runs on port 8761
+
+spring:
+  application:
+    name: eureka-service  # Name of the Eureka Server
+
+eureka:
+  instance:
+    # hostname: 192.168.1.177 or  192.168.1.6  # Old hostname (commented)
+    hostname: localhost  # Updated hostname (matches your WiFi IP)
+  client:
+    register-with-eureka: false  # Eureka Server itself doesn’t need to register
+    fetch-registry: false  # No need to fetch registry
+  server:
+    enable-self-preservation: true  # Optional: Disable self-preservation mode
